@@ -54,7 +54,7 @@ NSString *const kVideoConfigURL = @"http://player.vimeo.com/video/%@/config";
         
         if (callback_if_error(error)) return;
         
-        self.videos = [jsonData valueForKeyPath:@"request.files.h264"];
+        self.videos = [jsonData valueForKeyPath:@"request.files.progressive"];
         self.thumbs = [jsonData valueForKeyPath:@"video.thumbs"];
 
         if (callback) {
